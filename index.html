@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/assets/img/favicon.ico">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/cfaf38fd58.js" crossorigin="anonymous"></script>
+    <title>Cloud Computing Services - Amazon Web Services (AWS) - Dvir Cohen Int march 22</title>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg">
+            <div class="top-nav-items">
+                <a class="navbar-brand" href="#">
+                    <img src="https://a0.awsstatic.com/libra-css/images/logos/aws_smile-header-desktop-en-white_59x35.png"
+                        alt="Amazon">
+                </a>
+                <div class="right-top-nav-items">
+                    <button class="create-account-btn">Create an AWS Account</button>
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page"
+                                href="https://aws.amazon.com/contact-us/?nc2=h_header">Contact Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page"
+                                href="https://aws.amazon.com/products/?nc2=h_ql_prod">Support <i
+                                    class="fas fa-caret-down"></i></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page"
+                                href="https://aws.amazon.com/products/?nc2=h_ql_prod">English <i
+                                    class="fas fa-caret-down"></i></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page"
+                                href="https://aws.amazon.com/products/?nc2=h_ql_prod">My Account <i
+                                    class="fas fa-caret-down"></i></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link"
+                                href="https://console.aws.amazon.com/console/home?nc2=h_ct&src=header-signin">Sign
+                                in</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
+                aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"><i class="fas fa-bars"></i></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarText">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page"
+                            href="https://aws.amazon.com/products/?nc2=h_ql_prod">Products</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://aws.amazon.com/solutions/?nc2=h_ql_sol">Solutions</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://aws.amazon.com/pricing/?nc2=h_ql_pr">Pricing</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://docs.aws.amazon.com/index.html?nc2=h_ql_doc">Documentation</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://aws.amazon.com/getting-started/?nc2=h_ql_le">Learn</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://aws.amazon.com/partners/?nc2=h_ql_pn">Partner Network</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://aws.amazon.com/marketplace/?nc2=h_ql_mp">AWS Marketplace</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://aws.amazon.com/customer-enablement/?nc2=h_ql_ce">Customer
+                            Enablement</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://aws.amazon.com/events/?nc2=h_ql_ev">Events</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://aws.amazon.com/contact-us/?nc2=h_ql_exm">Explore More
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fas fa-search"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container-fluid text-center am-support p-2 text-white fs-6">Amazon is supporting humanitarian efforts in
+        Ukraine | <b>Learn more</b>
+    </div>
+
+    <section class="slider">
+        <div id="carouselCaptions" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators slider-btn">
+                <button type="button" data-bs-target="#carouselCaptions" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1">
+                </button>
+                <button type="button" data-bs-target="#carouselCaptions" data-bs-slide-to="1" aria-label="Slide 2">
+                </button>
+                <button type="button" data-bs-target="#carouselCaptions" data-bs-slide-to="2" aria-label="Slide 3">
+                </button>
+                <button type="button" data-bs-target="#carouselCaptions" data-bs-slide-to="3" aria-label="Slide 4">
+                </button>
+                <button type="button" data-bs-target="#carouselCaptions" data-bs-slide-to="4" aria-label="Slide 5">
+                </button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active" style="background-image: url(../assets/img/slider/bg-1.png);
+                background-position: center;
+                position: relative;
+                height: inherit;     background-size: cover;">
+                    <div class="slider-inner-content">
+                        <div class="lead text-white">
+                            Use Amazon EC2, S3, and more — free for a full year
+                            <br>
+                            <span class="lead" style="color:#16BF9F;">Learn more about the AWS Free Tier</span>
+                        </div>
+
+                        <img src="./assets/img/slider/slider-img1.png" alt="...">
+                    </div>
+                </div>
+                <div class="carousel-item" style="background-image: url(../assets/img/slider/bg-2.png);
+                background-position: center;
+                position: relative;
+                height: inherit;     background-size: cover;">
+                    <div class="slider-inner-content">
+                        <div class="lead text-white">
+                            Explore the AWS platform, cloud products, and capabilities
+                            <br>
+                            <span class="lead" style="color:#527FFF;">Get started <span><i
+                                        class="fas fa-angle-double-right" style="font-size: 1rem;"></i></span></span>
+                        </div>
+
+                        <img src="./assets/img/slider/slider-img2.png" alt="...">
+                    </div>
+                </div>
+                <div class="carousel-item" style="background-image: url(../assets/img/slider/bg-3.png);
+                background-position: center;
+                position: relative;
+                height: inherit;     background-size: cover;">
+                    <div class="slider-inner-content">
+                        <div class="lead text-white">
+                            Getting Started Resource Center
+                            <br>
+                            <p class="lead fw-normal text-white my-3">Technical documentation and other free resources
+                                to help you build with AWS</p>
+                            <span class="lead" style="color:#527FFF;">Get started <span><i
+                                        class="fas fa-angle-double-right" style="font-size: 1rem;"></i></span></span>
+                        </div>
+
+                        <img src="./assets/img/slider/slider-img3.png" alt="...">
+                    </div>
+                </div>
+                <div class="carousel-item" style="background-image: url(../assets/img/slider/bg-4.jpg);
+                background-position: center;
+                position: relative;
+                height: inherit;     background-size: cover;">
+                    <div class="slider-inner-content">
+                        <div class="lead text-white">
+                            Amazon S3 Glacier Instant Retrieval
+                            <br>
+                            <p class="lead fw-normal text-white my-3">The lowest-cost archive storage with milliseconds
+                                retrieval for rarely accessed data</p>
+                            <span class="lead" style="color:#16BF9F;">Learn more <span><i
+                                        class="fas fa-angle-double-right" style="font-size: 1rem;"></i></span></span>
+                        </div>
+
+                        <img src="./assets/img/slider/slider-img4.png" alt="...">
+                    </div>
+                </div>
+                <div class="carousel-item" style="background-image: url(../assets/img/slider/bg-5.png);
+                background-position: center;
+                position: relative;
+                height: inherit;     background-size: cover;">
+                    <div class="slider-inner-content">
+                        <div class="lead text-white">
+                            Revolutionize Your Business
+                            <br>
+                            <p class="lead fw-normal text-white my-3">Effective leaders rely on data to make informed
+                                decisions and take meaningful action. They build a modern data strategy.</p>
+                            <span class="lead">Learn more <span><i class="fas fa-angle-double-right"
+                                        style="font-size: 1rem;"></i></span></span>
+                        </div>
+
+                        <img src="./assets/img/slider/slider-img5.png" alt="...">
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselCaptions" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselCaptions" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </section>
+    <section class="section-2 text-center">
+        <div class="container d-flex justify-content-around">
+            <div class="section-2-text">
+                <strong><a href="#explore-our-solutions">Solutions</a></strong>
+                <a href="#explore-our-solutions">View our AWS Solutions library</a>
+            </div>
+            <div class="section-2-text">
+                <strong><a href="#explore-our-products">Explore Our Products</a></strong>
+                <a href="#explore-our-products">Explore our cloud-based products</a>
+            </div>
+            <div class="section-2-text">
+                <strong><a href="#training_and_certification">Training &
+                        Certification</a></strong>
+                <a href="#training_and_certification">Learn how to build on AWS
+                </a>
+            </div>
+            <div class="section-2-text">
+                <strong><a href="#powering_customer_innovation">Powering Customer
+                        Innovation</a></strong>
+                <a href="#powering_customer_innovation">Read our customer successes</a>
+            </div>
+            <div class="section-2-text">
+                <strong><a href="#security_and_compliance">Security &
+                        Compliance</a></strong>
+                <a href="#security_and_compliance">Scale cloud security with AWS</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-3 text-center">
+        <div class="containter d-flex justify-content-around my-4">
+            <div>
+                <img src="/assets/img/section3/section3-1.png" alt="image1">
+                <strong>
+                    <p>Amazon Lightsail Extended Free Tier</p>
+                </strong>
+                <p>New customers get up to three months free on select virtual private servers</p>
+            </div>
+            <div>
+                <img src="/assets/img/section3/section3-2.png" alt="image2">
+                <strong>
+                    <p>Expand Your Knowledge of Cloud Security</p>
+                </strong>
+                <p>Learn how to securely build your future on AWS</p>
+            </div>
+            <div>
+                <img src="/assets/img/section3/section3-3.png" alt="image3">
+                <strong>
+                    <p>Free AWS Training</p>
+                </strong>
+                <p>Advance your career with AWS Cloud Practitioner Essentials—a free, six-hour, foundational course</p>
+            </div>
+            <div>
+                <img src="/assets/img/section3/section3-4.png" alt="image4">
+                <strong>
+                    <p>Amazon Elastic File System</p>
+                </strong>
+                <p>Introducing sub-millisecond read latencies for General Purpose file systems</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-4" id="explore-our-solutions">
+        <div class="container">
+            <h2 class="text-center">Explore Our Solutions</h2>
+            <h6>By Industry</h6>
+            <div class="d-flex flex-wrap justify-content-between">
+                <div>
+                    <img width="21%" src="/assets/img/section4/sectio4-1.png" alt="">
+                    <h5>Advertising & Marketing</h5>
+                    <p>Achieve cost-efficiency for petabyte-scale analytics and single-digit millisecond latency
+                        workloads.</p>
+                    <a href="">Learn More</a>
+                </div>
+                <div>
+                    <img width="21%" src="/assets/img/section4/sectio4-2.png" alt="">
+                    <h5>Financial Services</h5>
+                    <p>Less cost. More resiliency. Explore AWS solutions across banking, payments, capital markets, and
+                        insurance.</p>
+                    <a href="">Learn More</a>
+                </div>
+                <div>
+                    <img width="21%" src="/assets/img/section4/sectio4-3.png" alt="">
+                    <h5>Game Tech</h5>
+                    <p>Create computationally ridiculous games across all genres and platforms.</p>
+                    <a href="">Learn More</a>
+                </div>
+                <div>
+                    <img width="21%" src="/assets/img/section4/sectio4-4.png" alt="">
+                    <h5>Media & entertaiment</h5>
+                    <p>From content creation to distribution, purpose-built media solutions so you can move faster,
+                        smarter, and more efficiently.</p>
+                    <a href="">Learn More</a>
+                </div>
+            </div>
+            <div class="d-flex justify-content-end viewall"><a style="color: #008BCC;" href="">View All Industries
+                    <span><i class="fas fa-angle-double-right" style="font-size: 0.7rem;"></i></span></a></div>
+
+
+
+            <h6>By Technology Category</h6>
+            <div class="justify-content-between section4-second-cards">
+                <div>
+                    <img width="21%" src="/assets/img/section4/sectio4-5.png" alt="">
+                    <h5>Analytics & Data Lakes</h5>
+                    <p>Achieve cost-efficiency for petabyte-scale analytics and single-digit millisecond latency
+                        workloads.</p>
+                    <a href="">Learn More</a>
+                </div>
+                <div>
+                    <img width="21%" src="/assets/img/section4/sectio4-6.png" alt="">
+                    <h5>Machine Learning</h5>
+                    <p>Less cost. More resiliency. Explore AWS solutions across banking, payments, capital markets, and
+                        insurance.</p>
+                    <a href="">Learn More</a>
+                </div>
+                <div>
+                    <img width="21%" src="/assets/img/section4/sectio4-7.png" alt="">
+                    <h5>Serverless Computing</h5>
+                    <p>Create computationally ridiculous games across all genres and platforms.</p>
+                    <a href="">Learn More</a>
+                </div>
+                <div>
+                    <img width="21%" src="/assets/img/section4/sectio4-8.png" alt="">
+                    <h5>Storage</h5>
+                    <p>From content creation to distribution, purpose-built media solutions so you can move faster,
+                        smarter, and more efficiently.</p>
+                    <a href="">Learn More</a>
+                </div>
+            </div>
+            <div class="d-flex justify-content-end mb-3 viewall"><a style="color: #008BCC;" href="">View All Solutions
+                    <span><i class="fas fa-angle-double-right" style="font-size: 0.7rem;"></i></span></a></div>
+        </div>
+    </section>
+
+    <section class="section-5" id="explore-our-products">
+        <div class="container">
+            <h2 class="text-center">Explore Our Products</h2>
+            <div class="d-flex justify-content-between text-white my-5">
+                <div class="section5-container px-sm-3 py-4 fw-bold">
+                    <img src="/assets/img/section5/section5-1.png" alt="">
+                    <br>
+                    <span> Analytics </span>
+                </div>
+                <div class="section5-container px-sm-3 py-4 fw-bold" style="background-color: #0073BB;">
+                    <img src="/assets/img/section5/section5-2.png" alt="">
+                    <br>
+                    <span>Cloud Financial Managment</span>
+                </div>
+                <div class="section5-container px-sm-3 py-4 fw-bold">
+                    <img src="/assets/img/section5/section5-3.png" alt="">
+                    <br>
+                    <span> Compute</span>
+                </div>
+                <div class="section5-container px-sm-3 py-4 fw-bold">
+                    <img src="/assets/img/section5/section5-4.png" alt="">
+                    <br>
+                    <span>Containers</span>
+                </div>
+                <div class="section5-container px-sm-3 py-4 fw-bold">
+                    <img src="/assets/img/section5/section5-5.png" alt="">
+                    <br>
+                    <span> Database</span>
+                </div>
+                <div class="section5-container px-sm-3 py-4 fw-bold">
+                    <img src="/assets/img/section5/section5-6.png" alt="">
+                    <br>
+                    <span> Front-End Web & Mobile</span>
+                </div>
+                <div class="section5-container px-sm-3 py-4 fw-bold">
+                    <img src="/assets/img/section5/section5-7.png" alt="">
+                    <br>
+                    <span> Internet of Things</span>
+                </div>
+            </div>
+            <div class="d-flex justify-content-between my-5 section5-second-container small">
+                <div class="px-sm-3 py-4">
+                    <strong>AWS Budgets</strong>
+                    <p>Set custom cost and usage budgets</p>
+                </div>
+                <div class="px-sm-3 py-4">
+                    <strong>AWS Cost and Usage Report</strong>
+                    <p>Access comprehensive cost and usage information</p>
+                </div>
+                <div class="px-sm-3 py-4">
+                    <strong>AWS Cost Explorer</strong>
+                    <p>Analyze your AWS cost and usage</p>
+                </div>
+                <div class="px-sm-3 py-4">
+                    <strong>Reserved Instance (RI) Reporting</strong>
+                    <p>Dive deeper into your reserved instances (RIs)</p>
+                </div>
+                <div class="px-sm-3 py-4">
+                    <strong>Savings Plans</strong>
+                    <p>Save up to 72% on compute usage with flexible pricing</p>
+                </div>
+            </div>
+            <div class="text-center lead"><strong><a style="color:#0073BB" href="">View All Cloud Financial Management
+                        Products <span><i class="fas fa-angle-double-right"
+                                style="font-size: 0.8rem;"></i></span></a></strong></div>
+        </div>
+    </section>
+
+    <section class="section-6" id="training_and_certification">
+        <div class="container text-white text-center py-5 lead fw-normal">
+            <h2>Training and Certification</h2>
+            <a href="" style="color: var(--color-active-link);margin-right: 15px;">For Builders</a>
+            <a class="text-white" href="">For Decision Makers</a>
+            <div class="py-3">
+                For developers, data scientists, solutions architects, or anyone interested in learning how to build
+                on AWS today
+            </div>
+            <div class="section6-row my-4 small">
+                <div>
+                    <img src="/assets/img/section6/section6-1.png" alt="">
+                    <div>Free Online Training</div>
+                    Go from learning to doing with more than 500 free digital training courses built by AWS experts
+                    <div> Take a Digital Course »</div>
+                </div>
+                <div>
+                    <img src="/assets/img/section6/section6-2.png" alt="">
+                    <div>AWS Learning Recommendations</div>
+                    Start building today with Ramp-Up guides featuring curated resources to grow your AWS knowledge
+                    <div> Browse by Role or Solution»</div>
+                </div>
+                <div>
+                    <img src="/assets/img/section6/section6-3.png" alt="">
+                    <div>AWS Certification</div>
+                    Grow your career and business with industry-recognized credentials validating your cloud skills
+                    <div> Learn More About AWS Certification »</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-7" id="powering_customer_innovation">
+        <div class="container">
+            <h2 class="text-center">Powering Customer Innovation</h2>
+            <div class="d-flex justify-content-between text-white my-5">
+                <div class="section5-container px-sm-3 py-4 fw-bold" style="background-color: #0073BB;">
+                    <img src="/assets/img/section7/section7-1.png" alt="">
+                    <br>
+                    <span>Featured Customer Innovations </span>
+                </div>
+                <div class="section5-container px-sm-3 py-4 fw-bold">
+                    <img src="/assets/img/section7/section7-2.png" alt="">
+                    <br>
+                    <span>Advertising & Marketing </span>
+                </div>
+                <div class="section5-container px-sm-3 py-4 fw-bold">
+                    <img src="/assets/img/section7/section7-3.png" alt="">
+                    <br>
+                    <span>Aerospace & Satellite </span>
+                </div>
+                <div class="section5-container px-sm-3 py-4 fw-bold">
+                    <img src="/assets/img/section7/section7-4.png" alt="">
+                    <br>
+                    <span>Agriculture </span>
+                </div>
+                <div class="section5-container px-sm-3 py-4 fw-bold">
+                    <img src="/assets/img/section7/section7-5.png" alt="">
+                    <br>
+                    <span>Automotive </span>
+                </div>
+                <div class="section5-container px-sm-3 py-4 fw-bold">
+                    <img src="/assets/img/section7/section7-6.png" alt="">
+                    <br>
+                    <span>Education </span>
+                </div>
+                <div class="section5-container px-sm-3 py-4 fw-bold">
+                    <img src="/assets/img/section7/section7-7.png" alt="">
+                    <br>
+                    <span>Energy </span>
+                </div>
+            </div>
+            <div class="d-flex justify-content-between">
+                <div class="card" style="width: 18rem;">
+                    <img src="/assets/img/section7/section7-8.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <strong> Retail & Consumer Packaged Goods</strong>
+                        <p class="card-text">Building a contactless mobile beverage pouring solution in less than 100
+                            days</p>
+                    </div>
+                </div>
+                <div class="card" style="width: 18rem;">
+                    <img src="/assets/img/section7/section7-9.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <strong>Travel & Hospitality</strong>
+                        <p class="card-text">Growing an online travel platform with innovative vendor global payments
+                        </p>
+                    </div>
+                </div>
+                <div class="card" style="width: 18rem;">
+                    <img src="/assets/img/section7/section7-10.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <strong>Media & Entertainment</strong>
+                        <p class="card-text">Delivering award-winning entertainment to more than 200 million members</p>
+                    </div>
+                </div>
+                <div class="card" style="width: 18rem;">
+                    <img src="/assets/img/section7/section7-11.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <strong>Automotive</strong>
+                        <p class="card-text">Revolutionizing global operations by connecting data worldwide</p>
+                    </div>
+                </div>
+            </div>
+            <h5 class="text-center mt-5"><a style="color: var(--color-faux-sea);" href=""> View All Customer Stories
+                    <span><i class="fas fa-angle-double-right" style="font-size: 0.8rem;"></i></span></a></h5>
+        </div>
+    </section>
+
+    <section class="section-8" id="security_and_compliance">
+        <div class="container">
+            <h2 class="text-center text-white">Engineered for the Most Demanding Requirements</h2>
+            <div class="d-flex justify-content-between text-white m-5">
+                <div>
+                    <div class="fw-bold" style="color:var(--color-faux-sea);">Raise your security posture</div>
+                    <br>
+                    AWS is architected to be the most flexible and secure cloud computing environment available today.
+                    Our core infrastructure is built to satisfy the security requirements for the military, global
+                    banks, and other high-sensitivity organizations.
+                </div>
+                <div><img src="/assets/img/section8-1.png" alt=""></div>
+            </div>
+            <div class="d-flex justify-content-between text-white m-5">
+                <div class="section8-container">
+                    <div class="fw-bold" style="color:var(--color-faux-sea);">Compliant</div>
+                    Rich controls, auditing and broad security accreditations.
+                </div>
+                <div class="section8-container">
+                    <div class="fw-bold" style="color:var(--color-faux-sea);">Hybrid</div>
+                    Build hybrid architectures that extend your on-premises infrastructure to the cloud.
+                </div>
+                <div class="section8-container">
+                    <div class="fw-bold" style="color:var(--color-faux-sea);">Scalable</div>
+                    Access as much or as little as you need, and scale up and down as required with only a few minutes
+                    notice.
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <section class="section-9">
+        <div class="container">
+            <div class="text-center">
+                <h2>Global Network of AWS Regions</h2>
+                <p class="lead mb-5">
+                    The AWS Cloud spans 84 Availability Zones within 26 geographic regions around the world, with
+                    announced plans for 24 more Availability Zones and 8 more AWS Regions in Australia, Canada, India,
+                    Israel, New Zealand, Spain, Switzerland, and United Arab Emirates (UAE).
+                </p>
+                <img src="/assets/img/section9-map.png" alt="">
+                <br>
+                <h5><a href="#" class="fw-normal" style="color: #0090CE;">Learn More <span><i
+                                class="fas fa-angle-double-right" style="font-size: 0.8rem;"></i></span></a></h5>
+            </div>
+            <div>
+                <i style="color: #007DBC;font-size: 0.5rem;" class="fas fa-circle"></i> <span class="small mx-3">
+                    Regions
+                </span>
+                <i style="color:#EB5F07;font-size: 0.5rem;" class="fas fa-circle"></i> <span class="small mx-3"> Coming
+                    Soon
+                </span>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-10 text-center">
+        <div class="containter d-flex justify-content-around my-4">
+            <div>
+                <img src="/assets/img/section10/section10-1.png" alt="image1">
+                <strong>
+                    <p>Analyst Reports</p>
+                </strong>
+                <p>Read what top analysts such as Gartner and IDC are saying about AWS</p>
+            </div>
+            <div>
+                <img src="/assets/img/section10/section10-2.png" alt="image2">
+                <strong>
+                    <p>AWS Marketplace</p>
+                </strong>
+                <p>Launch a variety of popular software on AWS in minutes</p>
+            </div>
+            <div>
+                <img src="/assets/img/section10/section10-3.png" alt="image3">
+                <strong>
+                    <p>Work with AWS Partners</p>
+                </strong>
+                <p>Build and grow your business with the help of AWS Partners</p>
+            </div>
+            <div>
+                <img src="/assets/img/section10/section10-4.png" alt="image4">
+                <strong>
+                    <p>The Amazon Builders' Library</p>
+                </strong>
+                <p>Learn how Amazon builds and operates software from the builders themselves</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-11">
+        <div class="container text-white">
+            <div class="d-flex justify-content-between flex-wrap">
+                <div>
+                    <h5> Learn About AWS</h5>
+                    <a href="https://aws.amazon.com/what-is-aws/?nc1=f_cc">What Is AWS?</a>
+                    <a href="https://aws.amazon.com/what-is-cloud-computing/?nc1=f_cc">What Is Cloud Computing?</a>
+                    <a href="https://aws.amazon.com/devops/what-is-devops/?nc1=f_cc">AWS Inclusion, Diversity &
+                        Equity</a>
+                    <a href="https://aws.amazon.com/devops/what-is-devops/?nc1=f_cc">What Is DevOps?</a>
+                    <a href="https://aws.amazon.com/containers/?nc1=f_cc">What Is a Container?</a>
+                    <a href="https://aws.amazon.com/big-data/datalakes-and-analytics/what-is-a-data-lake/?nc1=f_cc">What
+                        Is a Data Lake?</a>
+                    <a href="https://aws.amazon.com/security/?nc1=f_cc">AWS Cloud Security</a>
+                    <a href="https://aws.amazon.com/new/?nc1=f_cc">What's New</a>
+                    <a href="https://aws.amazon.com/blogs/?nc1=f_cc">Blogs</a>
+                    <a href="https://press.aboutamazon.com/press-releases/aws">Press Releases</a>
+                </div>
+                <div>
+                    <h5> Resources for AWS</h5>
+                    <a href="https://aws.amazon.com/getting-started/?nc1=f_cc">Getting Started</a>
+                    <a href="https://aws.amazon.com/training/?nc1=f_cc">Training and Certification</a>
+                    <a href="https://aws.amazon.com/solutions/?nc1=f_cc">AWS Solutions Portfolio</a>
+                    <a href="https://aws.amazon.com/architecture/?nc1=f_cc">Architecture Center</a>
+                    <a href="https://aws.amazon.com/faqs/?nc1=f_dr">Product and Technical FAQs</a>
+                    <a href="https://aws.amazon.com/resources/analyst-reports/?nc1=f_cc">Analyst Reports</a>
+                    <a href="https://aws.amazon.com/partners/work-with-partners/?nc1=f_dr">AWS Partners</a>
+                </div>
+                <div>
+                    <h5> Developers on AWS</h5>
+                    <a href="https://aws.amazon.com/developer/?nc1=f_dr">Developer Center</a>
+                    <a href="https://aws.amazon.com/developer/tools/?nc1=f_dr">SDKs & Tools</a>
+                    <a href="https://aws.amazon.com/developer/language/net/?nc1=f_dr">.NET on AWS</a>
+                    <a href="https://aws.amazon.com/developer/language/python/?nc1=f_dr">Python on AWS</a>
+                    <a href="https://aws.amazon.com/developer/language/java/?nc1=f_dr">Java on AWS</a>
+                    <a href="https://aws.amazon.com/developer/language/php/?nc1=f_cc">PHP on AWS</a>
+                    <a href="https://aws.amazon.com/developer/language/javascript/?nc1=f_dr">JavaScript on AWS</a>
+                </div>
+                <div>
+                    <h5> Help</h5>
+                    <a href="https://aws.amazon.com/contact-us/?nc1=f_m">Contact Us</a>
+                    <a href="https://aws.amazon.com/contact-us/?nc1=f_m">File a Support Ticket</a>
+                    <a href="https://aws.amazon.com/premiumsupport/knowledge-center/?nc1=f_dr">Knowledge Center</a>
+                    <a href="https://repost.aws/?nc1=f_dr">AWS re:Post</a>
+                    <a href="https://aws.amazon.com/premiumsupport/?nc1=f_dr">AWS Support Overview</a>
+                    <a href="https://aws.amazon.com/legal/?nc1=f_cc">Legal</a>
+                    <a href="https://aws.amazon.com/legal/?nc1=f_cc">AWS Careers</a>
+                </div>
+                <div>
+                    <button class="small">Create an AWS Account</button>
+                    <div class="d-flex align-self-center m-4 section11-icons">
+                        <i class="fa fa-twitter"></i>
+                        <i class="fa fa-facebook"></i>
+                        <i class="fa fa-twitch"></i>
+                        <i class="fa fa-youtube"></i>
+                        <i class="fa fa-podcast"></i>
+                        <i class="fa fa-envelope-o"></i>
+                    </div>
+                    Amazon is an Equal Opportunity Employer:
+                    <span style="font-style: italic;"> Minority / Women / Disability / Veteran / Gender Identity /
+                        Sexual Orientation / Age. </span>
+                </div>
+            </div>
+            <br>
+            <h6 class="small">
+                Language
+                <span>عربي</span>
+                |
+                <span>Bahasa</span>
+                |
+                <span>Indonesia</span>
+                |
+                <span>Deutsch</span>
+                |
+                <span>English</span>
+                |
+                <span>Español</span>
+                |
+                <span>Français</span>
+                |
+                <span>Italiano</span>
+                |
+                <span>Português</span>
+                |
+                <span>Tiếng</span>
+                |
+                <span>Việt</span>
+                |
+                <span>Türkçe</span>
+                |
+                <span>Ρусский</span>
+                |
+                <span>ไทย</span>
+                |
+                <span>日本語</span>
+                |
+                <span>한국어</span>
+                |
+                <span>中文</span>
+                |
+                <span>(简体)</span>
+                |
+                <span>中文</span>
+                |
+                <span>(繁體)</span>
+            </h6>
+        </div>
+    </section>
+
+    <footer style="background-color: #EAEDED;">
+        <div class="container footer-container">
+            <div class="fw-normal">
+                <span>Privacy</span> | <span>Site Terms</span> | <span>Cookie Preferences</span> | © 2022, Amazon Web
+                Services, Inc. or its affiliates. All
+                rights reserved.
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
